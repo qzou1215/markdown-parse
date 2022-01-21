@@ -1,1 +1,1 @@
-[anoth'er link!](some-page.html)
+[anoth'er link!]
