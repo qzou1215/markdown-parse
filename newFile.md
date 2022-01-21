@@ -1,1 +1,1 @@
-[anoth'er link!]
+[anoth'er link]
