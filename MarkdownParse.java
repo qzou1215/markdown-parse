@@ -16,9 +16,11 @@ public class MarkdownParse {
             int openParen = markdown.indexOf("(", nextCloseBracket);
             int closeParen = markdown.indexOf(")", openParen);
             if(nextCloseBracket==markdown.length()-1){
+                toReturn.add("No link found.");
                 break;
             }
             else if(closeParen==openParen+1){
+                toReturn.add("No link in the parenthesis.");
                 break;
             }
             toReturn.add(markdown.substring(openParen + 1, closeParen));
