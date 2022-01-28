@@ -19,6 +19,10 @@ public class MarkdownParse {
                 toReturn.add("No link found.");
                 break;
             }
+            if (closeParen==openParen+1){
+                toReturn.add("No link in parenthesis");
+                break;
+            }
             toReturn.add(markdown.substring(openParen + 1, closeParen));
             currentIndex = closeParen + 1;
         }
