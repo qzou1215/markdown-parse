@@ -1,15 +1,24 @@
 import static org.junit.Assert.*;
 import org.junit.*;
+<<<<<<< HEAD
 import java.util.ArrayList;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
+=======
+
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.util.List;
+>>>>>>> 25a2c4e252ef1124775cfbaaf597681f0f5e2acd
 
 public class MarkdownParseTest {
     @Test
     public void addition() {
         assertEquals(2, 1 + 1);
     }
+<<<<<<< HEAD
     @Test
     public void testFile() throws IOException{
         String[] args = {"/Users/zouqingtong/Documents/GitHub/markdown-parse/test-file.md"};
@@ -36,3 +45,14 @@ public class MarkdownParseTest {
     }
 
 }
+=======
+
+    @Test
+    public void testFile1() throws IOException {
+        String contents= Files.readString(Path.of("./test-file.md"));
+        List<String> expect = List.of("https://something.com", "some-page.html");
+        assertEquals(MarkdownParse.getLinks(contents), expect);
+    }
+    
+}
+>>>>>>> 25a2c4e252ef1124775cfbaaf597681f0f5e2acd
