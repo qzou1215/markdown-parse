@@ -15,12 +15,25 @@ public class MarkdownParse {
             int nextCloseBracket = markdown.indexOf("]", nextOpenBracket);
             int openParen = markdown.indexOf("(", nextCloseBracket);
             int closeParen = markdown.indexOf(")", openParen);
+<<<<<<< HEAD
             if(nextCloseBracket==markdown.length()-1){
                 toReturn.add("No link found.");
                 break;
             }
             else if(closeParen==openParen+1){
                 toReturn.add("No link in the parenthesis.");
+=======
+            if (nextCloseBracket==markdown.length()-1){
+                toReturn.add("No link found.");
+                break;
+            }
+            if (closeParen==openParen+1){
+                toReturn.add("No link in parenthesis");
+                break;
+            }
+            if (openParen==-1){
+                toReturn.add("No parenthesis found.");
+>>>>>>> 25a2c4e252ef1124775cfbaaf597681f0f5e2acd
                 break;
             }
             toReturn.add(markdown.substring(openParen + 1, closeParen));
